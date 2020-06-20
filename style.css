@@ -3,22 +3,32 @@
   margin: 0;
   padding: 0;
 }
+
+html,
 body {
   width: 100vw;
   overflow-x: hidden;
+  font-family: "Crimson Text", serif;
   text-align: center;
 }
+
 header {
-  padding: 10px;
+  padding: 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 #logo {
   border: 0.5px solid grey;
   border-radius: 50%;
   width: 40px;
   height: 41px;
+  cursor: pointer;
+}
+#logo:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 #logo img {
   max-width: 100%;
@@ -27,22 +37,76 @@ header {
 header ul {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   font-size: 25px;
 }
+
 ul.navigation li {
-  padding: 10px 20px;
+  padding: 2px 12px;
+  cursor: pointer;
 }
 .btn {
-  background-color: #2d6cdf;
+  background-color: #222831;
   border: none;
+  border-radius: 10px;
   outline: none;
   color: white;
   padding: 8px 10px;
-  font-size: 20px;
+  font-size: 15px;
   cursor: pointer;
+  margin-top: 13px;
+  z-index: 1000;
+}
+.btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+#mblBtn {
+  background: none;
+  width: 30px;
+  height: 30px;
+  border: none;
+  outline: none;
+  display: block;
+  z-index: 1;
+}
+#mblBtn img {
+  max-width: 100%;
+  height: auto;
+}
+.dropdown {
+  position: relative;
+}
+.dropdownContent {
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 6px;
+  position: absolute;
+  display: none;
+}
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+.dropdownContent a {
+  text-decoration: none;
+  display: block;
+  color: black;
+  font-size: 20px;
+  line-height: 1.4;
+}
+.dropdownContent a:hover {
+  background-color: #ddd;
+}
+/* To display dropdown Item Properly */
+.dropdownItem {
+  width: 250px;
+  text-align: left;
+}
+.border:hover {
+  border: 1px solid #222831;
 }
 #heroText {
   font-family: "Dancing Script", cursive;
+  padding: 20px;
 }
 #heroText h3 {
   font-size: 125px;
@@ -74,9 +138,8 @@ ul.navigation li {
   height: auto;
 }
 .designImage {
-  /* border:1px solid red; */
   min-width: 200px;
-  width: 600px;
+  width: 280px;
   height: auto;
 }
 .designImage img {
@@ -92,32 +155,30 @@ hr {
 .secondContainer h4 {
   font-size: 40px;
 }
-.secondContainer {
-  padding: 0 100px;
-  font-family: "Crimson Text", serif;
-}
+
 .aboutMySelf {
   font-size: 27px;
   line-height: 1.6;
 }
-.first {
-  display: flex;
-  justify-content: center;
-  padding: 40px;
-  flex-direction: row;
-  align-items: center;
-  /* flex-wrap: wrap; */
+.introduction {
+  padding: 0 30px;
 }
+.first,
 .second {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
+  width: 60%;
+  margin: 50px auto 50px auto;
 }
-.thirdContainer,
+.first .left {
+  float: left;
+  margin-right: 5px;
+}
+
+.second .right {
+  float: right;
+  margin-left: 5px;
+}
 .fourthContainer {
-  padding: 0px 200px;
-  font-family: "Crimson Text", serif;
+  padding: 0px 40px;
 }
 .thirdContainer h3,
 .fourthContainer h3 {
@@ -133,13 +194,23 @@ hr {
 .fourthContainer p {
   font-size: 25px;
 }
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 #contactBtn {
   margin-top: 10px;
 }
+#contactBtn a {
+  text-decoration: none;
+  color: white;
+}
 footer {
-  background-color: #2d6cdf;
+  width: 100vw;
+  background-color: #222831;
   padding: 20px;
-  margin-top:15px;
+  margin-top: 15px;
 }
 .socialMedia ul {
   margin-top: 7px;
@@ -173,26 +244,78 @@ footer {
   transition: 0.6s;
   text-align: center;
 }
+.socialMedia ul li:nth-child(1) .fa:hover {
+  color: black;
+}
 
 .socialMedia ul li a:hover {
   transform: translate(0, -5px);
 }
 
 .socialMedia ul li:nth-child(1) a:hover {
+  background-color: whitesmoke;
+}
+
+.socialMedia ul li:nth-child(2) a:hover {
   background-color: #3b5999;
 }
-.socialMedia ul li:nth-child(2) a:hover {
+.socialMedia ul li:nth-child(3) a:hover {
   background-color: #55acee;
 }
-.socialMedia ul li:nth-child(3) a:hover {
+.socialMedia ul li:nth-child(4) a:hover {
   background-color: #e4405f;
 }
 
-.socialMedia ul li:nth-child(4) a:hover {
+.socialMedia ul li:nth-child(5) a:hover {
   background-color: rgba(255, 0, 0, 0.6);
 }
 .copyright {
-  font-size:20px;  
-  color:white;
+  font-size: 20px;
+  color: white;
   padding-top: 12px;
+}
+/* image as a center
+@media screen and (max-width: 665px) {
+  .designImage {
+    margin: 0 auto;
+  }
+} */
+/* Reduce the font size of header */
+
+@media screen and (max-width: 519px) {
+  .svgImage {
+    width: 280px;
+  }
+  .myImage {
+    width: 240px;
+  }
+}
+@media screen and (max-width: 482px) {
+  header ul {
+    font-size: 18px;
+  }
+  .dropdownContent a {
+    padding: 20px 0;
+    font-size: 12px;
+  }
+  #mblBtn {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+  }
+
+  .dropdownItem {
+    width: 170px;
+  }
+  #heroText h3 {
+    font-size: 100px;
+  }
+  #heroText p {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 409px) {
+  #mblBtn {
+    top: 62px;
+  }
 }
