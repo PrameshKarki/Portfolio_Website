@@ -55,7 +55,6 @@ ul.navigation li {
   font-size: 15px;
   cursor: pointer;
   margin-top: 13px;
-  z-index: 1000;
 }
 .btn:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
@@ -68,7 +67,11 @@ ul.navigation li {
   border: none;
   outline: none;
   display: block;
-  z-index: 1;
+  cursor: pointer;
+}
+#mblBtn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 #mblBtn img {
   max-width: 100%;
@@ -165,7 +168,7 @@ hr {
 }
 .first,
 .second {
-  width: 60%;
+  width: 78%;
   margin: 50px auto 50px auto;
 }
 .first .left {
@@ -274,13 +277,6 @@ footer {
   color: white;
   padding-top: 12px;
 }
-/* image as a center
-@media screen and (max-width: 665px) {
-  .designImage {
-    margin: 0 auto;
-  }
-} */
-/* Reduce the font size of header */
 
 @media screen and (max-width: 519px) {
   .svgImage {
@@ -289,18 +285,20 @@ footer {
   .myImage {
     width: 240px;
   }
+  #mblBtn {
+    position: absolute;
+    right: 15px;
+  }
 }
 @media screen and (max-width: 482px) {
   header ul {
     font-size: 18px;
   }
   .dropdownContent a {
-    padding: 20px 0;
+    padding: 10px 0;
     font-size: 12px;
   }
   #mblBtn {
-    position: absolute;
-    right: 15px;
     top: 20px;
   }
 
@@ -314,8 +312,10 @@ footer {
     font-size: 40px;
   }
 }
-@media screen and (max-width: 409px) {
+@media screen and (max-width: 374px) {
   #mblBtn {
-    top: 62px;
+    top: 56px;
   }
 }
+
+/* we have to  make design for less than 336px device */
