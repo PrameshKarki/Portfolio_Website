@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
-     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
@@ -23,28 +23,27 @@
 <body>
     <!-- Divison for first Container -->
     <div class="firstContainer">
+        <!-- Header Element -->
         <header>
-            <div class="animate__animated animate__zoomIn" id="logo">
-                <img src="Images/avatar.png" alt="avatar">
-            </div>
-
-            <ul class="navigation">
-                <li class="border">Home</li>
-                <li class="border">About</li>
-                <li class="dropdownItem">
-                    <div class="dropdown">
-                        <p class="dropdownButton">Projects <i class="fa fa-caret-down"></i></p>
-                        <div class="dropdownContent">
-                            <a href="https://covidtrackernepal.netlify.app">COVID19 Live Tracker</a>
-                            <a href="https://github.com/PrameshKarki">Visit Github</a>
-                        </div>
+            <div class="topnav" id="myTopnav">
+                <a href="#">
+                    <div class="animate__animated animate__zoomIn" id="logo">
+                        <img src="Images/avatar.png" alt="avatar">
                     </div>
-                </li>
-            </ul>
-            <!-- Button -->
+                </a>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Projects
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="https://covidtrackernepal.netlify.app">COVID19 Live Tracker</a>
+                        <a href="https://github.com/PrameshKarki">Visit Github</a>
 
-            <div class="mobileButton">
-                <button id="mblBtn"><img src="Images/darkMode.png" alt="button"></button>
+                    </div>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
             </div>
 
         </header>

@@ -4,9 +4,9 @@ const firstDiv = document.querySelector('.first');
 const secondDiv = document.querySelector('.second');
 const fourthContainer = document.querySelector('.fourthContainer');
 const introduction = document.querySelector('.introduction');
-window.onscroll = function () {
-    myFunction();
-}
+// window.onscroll = function () {
+//     myFunction();
+// }
 function myFunction() {
     let top = document.documentElement.scrollTop;
     if (top > 115 && top < 346) {
@@ -26,3 +26,12 @@ function myFunction() {
         fourthContainer.classList.add('animate__animated', 'animate__zoomIn')
     }
 }
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+} 
