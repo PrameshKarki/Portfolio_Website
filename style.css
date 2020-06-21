@@ -25,12 +25,12 @@ body {
   padding: 10px 20px;
   text-decoration: none;
   font-size: 25px;
-  outline:none;
+  outline: none;
 }
 .topnav .icon {
-  font-size:30px;
+  font-size: 30px;
   display: none;
-  outline:none;
+  outline: none;
 }
 
 .dropdown {
@@ -64,7 +64,7 @@ body {
   display: block;
   text-align: left;
   font-size: 20px;
-  outline:none;
+  outline: none;
 }
 
 .topnav a:not(:first-child):hover,
@@ -142,6 +142,9 @@ body {
   border-radius: 50%;
   max-width: 100%;
   height: auto;
+}
+.myImage a {
+  outline: none;
 }
 .designImage {
   min-width: 200px;
@@ -249,7 +252,7 @@ footer {
   box-shadow: 0 5px 4px rgb(0, 0, 0, 0.5);
   transition: 0.6s;
   text-align: center;
-  outline:none;
+  outline: none;
 }
 .socialMedia ul li:nth-child(1) .fa:hover {
   color: black;
