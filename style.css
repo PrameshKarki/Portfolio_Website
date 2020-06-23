@@ -11,6 +11,13 @@ body {
   font-family: "Crimson Text", serif;
   text-align: center;
 }
+#loader{
+  width:100vw;
+  height:100vh;
+  position: fixed;
+  background:white url('Images/loader.gif') no-repeat center;
+  z-index: 9999;
+}
 .topnav {
   overflow: hidden;
   background-color: white;
